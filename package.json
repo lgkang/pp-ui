@@ -1,14 +1,33 @@
 {
-  "name": "pp-ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "pipi-ui",
+  "version": "1.0.1",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name pp-ui --dest lib packages/index.js",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
+  "description": "A Component Library for Vue.js.",
+  "author": {
+    "name": "李皮皮",
+    "email" : "lgkangkang@163.com"
+  },
+  "main": "packages/index.js",
+  "style": "lib/index.css",
+  "license": "MIT",
+  "files": [
+    "packages",
+    "lib"
+  ],
+  "keyword": [
+    "component",
+    "ui",
+    "pp",
+    "vue"
+  ],
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
