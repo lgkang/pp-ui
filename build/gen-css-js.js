@@ -42,7 +42,7 @@ const copy = () =>
       let fileNameList = filepath.split(".");
       let fileName = fileNameList[1].split("/")[3].toLowerCase(); // 生成文件名
       let suffix = fileNameList[2]; // 生成后缀
-      let changeDirectory = `./lib/es/${fileName}`; // 组件打包地址
+      let changeDirectory = suffix === 'css' ? `./lib/es/${fileName}/style` : `./lib/es/${fileName}`; // 组件打包地址
       if (!fileName.includes("chunk-vendors")) {
         if (!fileName.includes("index"))
           mkdirs(changeDirectory, () =>
