@@ -1,10 +1,10 @@
 {
   "name": "pipi-ui",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && node build/gen-css-js.js",
     "lib": "vue-cli-service build --target lib --name pp-ui --dest lib packages/index.js",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
@@ -13,7 +13,7 @@
   "description": "A Component Library for Vue.js.",
   "author": {
     "name": "李皮皮",
-    "email" : "lgkangkang@163.com"
+    "email": "lgkangkang@163.com"
   },
   "main": "packages/index.js",
   "style": "lib/index.css",

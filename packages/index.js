@@ -1,10 +1,10 @@
 // 导入button组件
-import PPButton from './Button'
+import Button from './Button'
 import Tag from './Tag'
 
 // 组件列表
 const components = [
-    PPButton,
+    Button,
     Tag
 ]
 
@@ -25,6 +25,6 @@ export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
   // 以下是具体的组件列表
-  PPButton,
+  Button,
   Tag
 }
