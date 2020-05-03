@@ -1,4 +1,5 @@
 const glob = require("glob");
+const args = process.argv.splice(2);
 const getPages = function () {
     let result = {};
     glob.sync("packages/*/*.js").forEach((filepath) => {
@@ -15,15 +16,15 @@ const getPages = function () {
 };
 let pages = getPages();
 module.exports = {
-    pages: process.env.NODE_ENV === 'development' ? {
+    pages: process.env.NODE_ENV === "development" ? {
         index: {
-            entry: 'examples/main.js',
-            template: 'public/index.html',
-            filename: 'index.html'
+            entry: "examples/main.js",
+            template: "public/index.html",
+            filename: "index.html"
         }
     } : pages,
     filenameHashing: false,
-    lintOnSave:false,
+    lintOnSave: false,
     css: {
         extract: true,
     },
