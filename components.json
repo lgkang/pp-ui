@@ -1,4 +1,0 @@
-{
-    "Button": './packages/Button/index.js',
-    "Tag": './packages/Tag/index.js'
-}
