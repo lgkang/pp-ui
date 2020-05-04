@@ -46,6 +46,18 @@
         "userTesting",
         "video"
       ]
+    },
+    {
+      "login": "wutihong",
+      "name": "wutihong",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/24377930?v=4",
+      "profile": "https://github.com/wutihong",
+      "contributions": [
+        "code",
+        "content",
+        "data",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
