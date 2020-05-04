@@ -90,6 +90,27 @@
         "userTesting",
         "video"
       ]
+    },
+    {
+      "login": "ypl9591",
+      "name": "ypl9591",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/62583614?v=4",
+      "profile": "https://github.com/ypl9591",
+      "contributions": [
+        "a11y",
+        "question",
+        "blog",
+        "bug",
+        "business",
+        "code",
+        "content",
+        "data",
+        "doc",
+        "eventOrganizing",
+        "example",
+        "financial",
+        "fundingFinding"
+      ]
     }
   ],
   "contributorsPerLine": 7
