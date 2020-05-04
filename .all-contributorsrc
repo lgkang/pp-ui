@@ -1,0 +1,52 @@
+{
+  "projectName": "pipi-ui",
+  "projectOwner": "lgkang",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "lgkang",
+      "name": "lgkang",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/36944726?v=4",
+      "profile": "https://github.com/lgkang",
+      "contributions": [
+        "a11y",
+        "question",
+        "blog",
+        "bug",
+        "business",
+        "code",
+        "content",
+        "data",
+        "design",
+        "doc",
+        "eventOrganizing",
+        "example",
+        "financial",
+        "fundingFinding",
+        "ideas",
+        "infra",
+        "maintenance",
+        "platform",
+        "plugin",
+        "projectManagement",
+        "review",
+        "security",
+        "talk",
+        "test",
+        "tool",
+        "translation",
+        "tutorial",
+        "userTesting",
+        "video"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
