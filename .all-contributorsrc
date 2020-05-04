@@ -71,6 +71,25 @@
         "data",
         "doc"
       ]
+    },
+    {
+      "login": "xuanyulingnfeg",
+      "name": "lingfeng",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/22806666?v=4",
+      "profile": "https://github.com/xuanyulingnfeg",
+      "contributions": [
+        "a11y",
+        "question",
+        "blog",
+        "bug",
+        "business",
+        "code",
+        "content",
+        "data",
+        "tutorial",
+        "userTesting",
+        "video"
+      ]
     }
   ],
   "contributorsPerLine": 7
