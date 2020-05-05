@@ -1,7 +1,9 @@
 # pipi-ui
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -50,7 +52,62 @@ npm run docs:build //构建文档
 
 npm run publish //发布到npm，注意必须先在npm login
 ```
+
+## 下一步计划
+
+优化多库统一的管理
+
+新增 ui 库 pipi-el-ui，对 element-ui 的组件高层级封装（hoc），完善业务
+
 ## Examples
+
+## Question
+
+### q：可以不用项目里面的 npm run publish 吗？
+
+a：npm run publish 该命令的主要作用的是，根据你本地 xxx.env.js 里面的
+package 和 npm 去动态修改 package.json 配置和 npm 的设置，最后 npm publish（必须首先执行 npm login），
+执行成功后会恢复当前的 package.json。
+
+如在当前目录直接执行 npm publish 会直接发布当前的 package.json 上 npm
+
+### q：增加多一个组件库该如何设置？
+
+a：步骤如下:
+
+```js
+//在根目录建pipi-ui.env.js文件
+module.exports = {
+  key: "pipi-ui", //当前环境
+  components: "packages", //组件库所在的目录（根目录）
+  packages: {
+    //当前组件库名字
+    name: "pipi-ui",
+    //当前组件库版本
+    version: "1.0.7",
+    // ...  其他设置
+  },
+  //发布npm的设置
+  npmConfig: {
+    //设置npm的地址
+    registry: "https://registry.npmjs.org/",
+    // ...  其他设置
+  },
+  //vue.config.js选项
+  "vue.config": {},
+};
+```
+
+再在 package.json 的 scripts 增加如下
+
+```js
+"scripts": {
+        "build:pipi-ui": "vue-cli-service build pipi-ui && node build/gen-css-js.js",
+        "publish:pipi-ui": "node build/gen-publish.js pipi-ui",
+        "docs:pipi-ui": "concurrently \"vue-docgen --watch\" \"vuepress dev docs pipi-ui\"",
+        "docs:build:pipi-ui": "vue-docgen && vuepress build docs pipi-ui",
+    },
+```
 
 ## Contributors ✨
 
@@ -69,4 +126,5 @@ npm run publish //发布到npm，注意必须先在npm login
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->

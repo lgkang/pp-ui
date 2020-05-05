@@ -1,16 +1,17 @@
 const glob = require("glob");
-const args = process.argv.splice(2);
+const genConfig = require('../env.config')
+const config = genConfig();
 const getPages = function () {
     let result = {};
-    glob.sync("packages/*/*.js").forEach((filepath) => {
+    glob.sync(`${config.components}/*/*.js`).forEach((filepath) => {
         let fileList = filepath.split("/");
         let fileName = fileList[fileList.length - 2];
         result[fileName] = {
-            entry: `packages/${fileName}/index.js`,
+            entry: `${config.components}/${fileName}/index.js`,
         };
     });
     result["index"] = {
-        entry: `packages/index.js`,
+        entry: `${config.components}/index.js`,
     };
     return result;
 };

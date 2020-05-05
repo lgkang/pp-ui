@@ -2,6 +2,7 @@
 node_modules
 /dist
 /lib
+/docs/components
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/

@@ -1,90 +1,83 @@
 {
-  "name": "pipi-ui",
-  "version": "1.0.6",
-  "private": false,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && node build/gen-css-js.js",
-    "publish:pipi-el-ui": "node build/gen-package.js pipi-el-ui",
-    "docs": "concurrently \"vue-docgen --watch\" \"vuepress dev docs\"",
-    "docs:build": "vue-docgen && vuepress build docs",
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate",
-    "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
-  },
-  "description": "A Component Library for Vue.js.",
-  "author": {
-    "name": "李皮皮",
-    "email": "lgkangkang@163.com"
-  },
-  "main": "packages/index.js",
-  "style": "lib/index.css",
-  "license": "MIT",
-  "files": [
-    "packages",
-    "lib"
-  ],
-  "keyword": [
-    "component",
-    "ui",
-    "pp",
-    "vue"
-  ],
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.3.0",
-    "@vue/cli-plugin-e2e-cypress": "^4.3.0",
-    "@vue/cli-plugin-eslint": "^4.3.0",
-    "@vue/cli-plugin-unit-mocha": "^4.3.0",
-    "@vue/cli-service": "^4.3.0",
-    "@vue/test-utils": "1.0.0-beta.31",
-    "@vuepress/plugin-register-components": "^1.4.1",
-    "all-contributors-cli": "^6.14.0",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-component": "^1.1.1",
-    "babel-plugin-import": "^1.13.0",
-    "chai": "^4.1.2",
-    "concurrently": "^5.2.0",
-    "core-js": "^3.6.4",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "less": "^3.0.4",
-    "less-loader": "^5.0.0",
-    "shelljs": "^0.8.4",
-    "vue": "^2.6.11",
-    "vue-docgen-cli": "^4.19.2",
-    "vue-template-compiler": "^2.6.11",
-    "vuepress-plugin-live": "^1.5.3"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "pipi-ui",
+    "version": "1.0.6",
+    "private": false,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build:pipi-ui": "vue-cli-service build pipi-ui && node build/gen-css-js.js",
+        "publish:pipi-ui": "node build/gen-publish.js pipi-ui",
+        "docs:pipi-ui": "concurrently \"vue-docgen --watch\" \"vuepress dev docs pipi-ui\"",
+        "docs:build:pipi-ui": "vue-docgen && vuepress build docs pipi-ui",
+        "contributors:add": "all-contributors add",
+        "contributors:generate": "all-contributors generate",
+        "lint": "vue-cli-service lint",
+        "test:e2e": "vue-cli-service test:e2e",
+        "test:unit": "vue-cli-service test:unit"
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+    "description": "A Component Library for Vue.js.",
+    "author": {
+        "name": "李皮皮",
+        "email": "lgkangkang@163.com"
+    },
+    "main": "packages/index.js",
+    "style": "lib/index.css",
+    "license": "MIT",
+    "files": [
+        "packages",
+        "lib"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "keyword": [
+        "component",
+        "ui",
+        "pp",
+        "vue"
+    ],
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.3.0",
+        "@vue/cli-plugin-e2e-cypress": "^4.3.0",
+        "@vue/cli-plugin-eslint": "^4.3.0",
+        "@vue/cli-plugin-unit-mocha": "^4.3.0",
+        "@vue/cli-service": "^4.3.0",
+        "@vue/test-utils": "1.0.0-beta.31",
+        "@vuepress/plugin-register-components": "^1.4.1",
+        "all-contributors-cli": "^6.14.0",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-component": "^1.1.1",
+        "babel-plugin-import": "^1.13.0",
+        "chai": "^4.1.2",
+        "concurrently": "^5.2.0",
+        "core-js": "^3.6.4",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "less": "^3.0.4",
+        "less-loader": "^5.0.0",
+        "shelljs": "^0.8.4",
+        "vue": "^2.6.11",
+        "vue-docgen-cli": "^4.19.2",
+        "vue-template-compiler": "^2.6.11",
+        "vuepress-plugin-live": "^1.5.3"
     },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
+    "eslintConfig": {
+        "root": true,
         "env": {
-          "mocha": true
-        }
-      }
-    ]
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {},
+        "overrides": [{
+            "files": [
+                "**/__tests__/*.{j,t}s?(x)",
+                "**/tests/unit/**/*.spec.{j,t}s?(x)"
+            ],
+            "env": {
+                "mocha": true
+            }
+        }]
+    }
 }
