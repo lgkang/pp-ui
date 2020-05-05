@@ -34,7 +34,7 @@
 - [x] 根据组件修改自动更新文档（开发模式）
 - [x] 动态修改 packapge.json 和 npm 配置（多库统一）
 - [x] 优化多库统一的管理
-- [ ] 添加 eslint
+- [x] 添加 eslint
 - [ ] 代码规范工具
 
 ## 脚本
@@ -83,7 +83,7 @@ module.exports = {
   packages: {
     //当前组件库名字
     name: "pipi-ui",
-    //当前组件库版本
+    //下一组件库版本
     version: "1.0.7",
     // ...  其他设置
   },
@@ -110,8 +110,10 @@ module.exports = {
 ```
 
 :::warning
+
 注意：因为发布要到 npm，registry 必须是 npm 的地址，所以如果设置淘宝镜像或者 cnpm，可以自行修改
 gen-publish.js，npm publish 改成 npm publish && npm set registry=镜像地址
+
 :::
 
 ### q：打包后的组件库如何按需导入？
@@ -135,7 +137,9 @@ npm i babel-plugin-component -D
 ```
 
 :::warning
+
 若使用的是 babel-plugin-import，按需导入样式不生效（原因未知）
+
 :::
 
 ## Contributors ✨
