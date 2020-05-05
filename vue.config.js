@@ -1,5 +1,5 @@
 const glob = require("glob");
-const genConfig = require('../env.config')
+const genConfig = require('./env.config')
 const config = genConfig();
 const getPages = function () {
     let result = {};
@@ -16,6 +16,8 @@ const getPages = function () {
     return result;
 };
 let pages = getPages();
+//获取其他设置
+const otherConfig = config['vue.config'] || {};
 module.exports = {
     pages: process.env.NODE_ENV === "development" ? {
         index: {
@@ -44,4 +46,5 @@ module.exports = {
             .use("babel")
             .loader("babel-loader");
     },
+    ...otherConfig
 };

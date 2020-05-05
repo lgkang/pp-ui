@@ -33,7 +33,7 @@
 - [x] 根据注释集成自动化生成文档（vuepress + vue-docgen-cli）
 - [x] 根据组件修改自动更新文档（开发模式）
 - [x] 动态修改 packapge.json 和 npm 配置（多库统一）
-- [ ] 优化多库统一的管理
+- [x] 优化多库统一的管理
 - [ ] 添加 eslint
 - [ ] 代码规范工具
 
@@ -108,6 +108,35 @@ module.exports = {
         "docs:build:pipi-ui": "vue-docgen && vuepress build docs pipi-ui",
     },
 ```
+
+:::warning
+注意：因为发布要到 npm，registry 必须是 npm 的地址，所以如果设置淘宝镜像或者 cnpm，可以自行修改
+gen-publish.js，npm publish 改成 npm publish && npm set registry=镜像地址
+:::
+
+### q：打包后的组件库如何按需导入？
+
+a: 步骤如下：
+
+```js
+
+npm i babel-plugin-component -D
+
+//在babel.config.js增加
+[
+    "component",
+        {
+            libraryName: "pipi-ui",
+            libDir: "lib/es",
+            style: "style/index.css",
+        },
+    "pipi-ui",
+],
+```
+
+:::warning
+若使用的是 babel-plugin-import，按需导入样式不生效（原因未知）
+:::
 
 ## Contributors ✨
 
